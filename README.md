@@ -32,6 +32,7 @@ Telegram-бот, который присылает случайных котик
 1. Склонируйте репозиторий и создайте виртуальное окружение:
 
    ```bash
+   # bash
    git clone git@github.com:Oleg202020/kittybot.git
    cd kittybot
    python -m venv venv
@@ -42,6 +43,7 @@ Telegram-бот, который присылает случайных котик
 2. Установите зависимости:
 
     ```bash
+    # bash
     pip install -r requirements.txt
     ```
 
@@ -57,13 +59,14 @@ Telegram-бот, который присылает случайных котик
 5. Запустите:
 
     ```bash
+    # bash
     python main.py          # или kittybot.py — имя вашего файла
     ```
 
 Бот начнёт опрашивать Telegram и отвечать пользователям.
 
 ## Структура проекта
-    ```text
+    ```
     kittybot/
     ├── bot.py              # Основная логика
     ├── requirements.txt    # Зависимости
@@ -89,6 +92,7 @@ Telegram-бот, который присылает случайных котик
 ## Развёртывание в Docker (опционально)
 
 ```dockerfile
+# dockerfile
 FROM python:3.12-slim
 
 WORKDIR /app
@@ -99,6 +103,7 @@ CMD ["python", "bot.py"]
 ```
 
 ```bash
+# bash
 docker build -t kittybot .
 docker run -d --env TOKEN=<TOKEN> kittybot
 ```
